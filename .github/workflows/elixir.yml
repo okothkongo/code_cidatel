@@ -40,5 +40,7 @@ jobs:
       run: mix deps.get
     - name: Setup db
       run: mix ecto.create
+    - name: linter
+      run: lint
     - name: Run tests
       run: mix test
