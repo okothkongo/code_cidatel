@@ -6,7 +6,7 @@ defmodule CodeCitadelWeb.Endpoint do
   # Set :encryption_salt if you would also like to encrypt it.
   @session_options [
     store: :cookie,
-    key: "_course_work_web_key",
+    key: "_course_work_key",
     signing_salt: "ICnFXUrv"
   ]
 
@@ -18,7 +18,7 @@ defmodule CodeCitadelWeb.Endpoint do
   # when deploying your static files in production.
   plug(Plug.Static,
     at: "/",
-    from: :course_work_web,
+    from: :course_work,
     gzip: false,
     only: ~w(assets fonts images favicon.ico robots.txt)
   )
