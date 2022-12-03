@@ -10,6 +10,7 @@ defmodule CodeCitadel.Application do
     children = [
       # Start the Ecto repository
       CodeCitadel.Repo,
+      CodeCitadelWeb.Endpoint,
       # Start the PubSub system
       {Phoenix.PubSub, name: CodeCitadel.PubSub}
       # Start a worker by calling: CodeCitadel.Worker.start_link(arg)
