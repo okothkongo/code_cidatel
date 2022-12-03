@@ -41,6 +41,6 @@ jobs:
     - name: Setup db
       run: mix ecto.create
     - name: linter
-      run: lint
+      run: mix lint
     - name: Run tests
       run: mix test
