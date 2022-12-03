@@ -1,12 +1,12 @@
-defmodule CodeCitadelWeb do
+defmodule CodeCitadel.CouserWorkWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, views, channels and so on.
 
   This can be used in your application as:
 
-      use CodeCitadelWeb, :controller
-      use CodeCitadelWeb, :view
+      use CodeCitadel.CouserWorkWeb, :controller
+      use CodeCitadel.CouserWorkWeb, :view
 
   The definitions below will be executed for every view,
   controller, etc, so keep them short and clean, focused
@@ -19,11 +19,11 @@ defmodule CodeCitadelWeb do
 
   def controller do
     quote do
-      use Phoenix.Controller, namespace: CodeCitadelWeb
+      use Phoenix.Controller, namespace: CodeCitadel.CouserWorkWeb
 
       import Plug.Conn
-      import CodeCitadelWeb.Gettext
-      alias CodeCitadelWeb.Router.Helpers, as: Routes
+      import CodeCitadel.CouserWorkWeb.Gettext
+      alias CodeCitadel.CouserWorkWeb.Router.Helpers, as: Routes
     end
   end
 
@@ -31,7 +31,7 @@ defmodule CodeCitadelWeb do
     quote do
       use Phoenix.View,
         root: "lib/course_work_web/templates",
-        namespace: CodeCitadelWeb
+        namespace: CodeCitadel.CouserWorkWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller,
@@ -45,7 +45,7 @@ defmodule CodeCitadelWeb do
   def live_view do
     quote do
       use Phoenix.LiveView,
-        layout: {CodeCitadelWeb.LayoutView, "live.html"}
+        layout: {CodeCitadel.CouserWorkWeb.LayoutView, "live.html"}
 
       unquote(view_helpers())
     end
@@ -80,7 +80,7 @@ defmodule CodeCitadelWeb do
   def channel do
     quote do
       use Phoenix.Channel
-      import CodeCitadelWeb.Gettext
+      import CodeCitadel.CouserWorkWeb.Gettext
     end
   end
 
@@ -95,9 +95,9 @@ defmodule CodeCitadelWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
 
-      import CodeCitadelWeb.ErrorHelpers
-      import CodeCitadelWeb.Gettext
-      alias CodeCitadelWeb.Router.Helpers, as: Routes
+      import CodeCitadel.CouserWorkWeb.ErrorHelpers
+      import CodeCitadel.CouserWorkWeb.Gettext
+      alias CodeCitadel.CouserWorkWeb.Router.Helpers, as: Routes
     end
   end
 

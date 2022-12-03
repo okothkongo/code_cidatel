@@ -1,5 +1,5 @@
-defmodule CodeCitadelWeb.ErrorView do
-  use CodeCitadelWeb, :view
+defmodule CodeCitadel.CouserWorkWeb.ErrorView do
+  use CodeCitadel.CouserWorkWeb, :view
 
   # If you want to customize a particular status code
   # for a certain format, you may uncomment below.

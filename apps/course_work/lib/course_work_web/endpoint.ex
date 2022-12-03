@@ -1,4 +1,4 @@
-defmodule CodeCitadelWeb.Endpoint do
+defmodule CodeCitadel.CouserWorkWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :course_work
 
   # The session will be stored in the cookie and signed,
@@ -49,5 +49,5 @@ defmodule CodeCitadelWeb.Endpoint do
   plug(Plug.MethodOverride)
   plug(Plug.Head)
   plug(Plug.Session, @session_options)
-  plug(CodeCitadelWeb.Router)
+  plug(CodeCitadel.CouserWorkWeb.Router)
 end

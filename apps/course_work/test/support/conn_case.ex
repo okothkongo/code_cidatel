@@ -1,4 +1,4 @@
-defmodule CodeCitadelWeb.ConnCase do
+defmodule CodeCitadel.CouserWorkWeb.ConnCase do
   @moduledoc """
   This module defines the test case to be used by
   tests that require setting up a connection.
@@ -11,7 +11,7 @@ defmodule CodeCitadelWeb.ConnCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use CodeCitadelWeb.ConnCase, async: true`, although
+  by setting `use CodeCitadel.CouserWorkWeb.ConnCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -22,12 +22,12 @@ defmodule CodeCitadelWeb.ConnCase do
       # Import conveniences for testing with connections
       import Plug.Conn
       import Phoenix.ConnTest
-      import CodeCitadelWeb.ConnCase
+      import CodeCitadel.CouserWorkWeb.ConnCase
 
-      alias CodeCitadelWeb.Router.Helpers, as: Routes
+      alias CodeCitadel.CouserWorkWeb.Router.Helpers, as: Routes
 
       # The default endpoint for testing
-      @endpoint CodeCitadelWeb.Endpoint
+      @endpoint CodeCitadel.CouserWorkWeb.Endpoint
     end
   end
 

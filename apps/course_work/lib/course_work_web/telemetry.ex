@@ -1,4 +1,4 @@
-defmodule CodeCitadelWeb.Telemetry do
+defmodule CodeCitadel.CouserWorkWeb.Telemetry do
   @moduledoc false
   use Supervisor
   import Telemetry.Metrics
@@ -66,7 +66,7 @@ defmodule CodeCitadelWeb.Telemetry do
     [
       # A module, function and arguments to be invoked periodically.
       # This function must call :telemetry.execute/3 and a metric must be added above.
-      # {CodeCitadelWeb, :count_users, []}
+      # {CodeCitadel.CouserWorkWeb, :count_users, []}
     ]
   end
 end

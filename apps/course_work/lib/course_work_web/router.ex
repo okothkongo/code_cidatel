@@ -1,11 +1,11 @@
-defmodule CodeCitadelWeb.Router do
-  use CodeCitadelWeb, :router
+defmodule CodeCitadel.CouserWorkWeb.Router do
+  use CodeCitadel.CouserWorkWeb, :router
 
   pipeline :browser do
     plug(:accepts, ["html"])
     plug(:fetch_session)
     plug(:fetch_live_flash)
-    plug(:put_root_layout, {CodeCitadelWeb.LayoutView, :root})
+    plug(:put_root_layout, {CodeCitadel.CouserWorkWeb.LayoutView, :root})
     plug(:protect_from_forgery)
     plug(:put_secure_browser_headers)
   end
@@ -14,14 +14,14 @@ defmodule CodeCitadelWeb.Router do
     plug(:accepts, ["json"])
   end
 
-  scope "/", CodeCitadelWeb do
+  scope "/", CodeCitadel.CouserWorkWeb do
     pipe_through(:browser)
 
     get("/", PageController, :index)
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", CodeCitadelWeb do
+  # scope "/api", CodeCitadel.CouserWorkWeb do
   #   pipe_through :api
   # end
 
@@ -38,7 +38,7 @@ defmodule CodeCitadelWeb.Router do
     scope "/" do
       pipe_through(:browser)
 
-      live_dashboard("/dashboard", metrics: CodeCitadelWeb.Telemetry)
+      live_dashboard("/dashboard", metrics: CodeCitadel.CouserWorkWeb.Telemetry)
     end
   end
 

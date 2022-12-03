@@ -1,3 +1,3 @@
-defmodule CodeCitadelWeb.PageViewTest do
-  use CodeCitadelWeb.ConnCase, async: true
+defmodule CodeCitadel.CouserWorkWeb.PageViewTest do
+  use CodeCitadel.CouserWorkWeb.ConnCase, async: true
 end

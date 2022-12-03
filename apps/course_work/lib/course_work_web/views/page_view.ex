@@ -1,3 +1,3 @@
-defmodule CodeCitadelWeb.PageView do
-  use CodeCitadelWeb, :view
+defmodule CodeCitadel.CouserWorkWeb.PageView do
+  use CodeCitadel.CouserWorkWeb, :view
 end

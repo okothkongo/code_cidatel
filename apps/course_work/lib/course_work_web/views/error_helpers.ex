@@ -1,4 +1,4 @@
-defmodule CodeCitadelWeb.ErrorHelpers do
+defmodule CodeCitadel.CouserWorkWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -39,9 +39,9 @@ defmodule CodeCitadelWeb.ErrorHelpers do
     # should be written to the errors.po file. The :count option is
     # set by Ecto and indicates we should also apply plural rules.
     if count = opts[:count] do
-      Gettext.dngettext(CodeCitadelWeb.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(CodeCitadel.CouserWorkWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(CodeCitadelWeb.Gettext, "errors", msg, opts)
+      Gettext.dgettext(CodeCitadel.CouserWorkWeb.Gettext, "errors", msg, opts)
     end
   end
 end

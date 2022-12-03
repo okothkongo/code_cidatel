@@ -15,7 +15,7 @@ config :course_work, CodeCitadel.Repo,
 
 # We don't run a server during test. If one is required,
 # you can enable the server option below.
-config :course_work, CodeCitadelWeb.Endpoint,
+config :course_work, CodeCitadel.CouserWorkWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
   secret_key_base: "B3jzcSBD1NeVE2sDkvzng/3/6sL2880Dmw2L11Z5E0//FwSRWlpTKsYufY9U1358",
   server: false

@@ -27,15 +27,19 @@ config :course_work, CodeCitadel.Mailer, adapter: Swoosh.Adapters.Local
 config :swoosh, :api_client, false
 
 config :course_work,
-  # namespace: CodeCitadelWeb,
+  # namespace: CodeCitadel.CouserWorkWeb,
   ecto_repos: [CodeCitadel.Repo]
 
 # generators: [context_app: :course_work]
 
 # Configures the endpoint
-config :course_work, CodeCitadelWeb.Endpoint,
+config :course_work, CodeCitadel.CouserWorkWeb.Endpoint,
   url: [host: "localhost"],
-  render_errors: [view: CodeCitadelWeb.ErrorView, accepts: ~w(html json), layout: false],
+  render_errors: [
+    view: CodeCitadel.CouserWorkWeb.ErrorView,
+    accepts: ~w(html json),
+    layout: false
+  ],
   pubsub_server: CodeCitadel.PubSub,
   live_view: [signing_salt: "jO93Geel"]
 
