@@ -24,7 +24,7 @@ defmodule CodeCitadel.Umbrella.MixProject do
   # Dependencies listed here are available only for this project
   # and cannot be accessed from applications inside the apps/ folder.
   defp deps do
-    []
+    [{:credo, "~> 1.6", only: [:dev, :test], runtime: false}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
@@ -39,7 +39,13 @@ defmodule CodeCitadel.Umbrella.MixProject do
   defp aliases do
     [
       # run `mix setup` in all child apps
-      setup: ["cmd mix setup"]
+      setup: ["cmd mix setup"],
+      lint: [
+        "format",
+        "format --check-formatted",
+        "compile --warnings-as-errors --force",
+        "credo --strict"
+      ]
     ]
   end
 end
