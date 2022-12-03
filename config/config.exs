@@ -26,15 +26,20 @@ config :course_work, CodeCitadel.Mailer, adapter: Swoosh.Adapters.Local
 # Swoosh API client is needed for adapters other than SMTP.
 config :swoosh, :api_client, false
 
-config :course_work_web,
-  namespace: CodeCitadelWeb,
-  ecto_repos: [CodeCitadel.Repo],
-  generators: [context_app: :course_work]
+config :course_work,
+  # namespace: CodeCitadel.CouserWorkWeb,
+  ecto_repos: [CodeCitadel.Repo]
+
+# generators: [context_app: :course_work]
 
 # Configures the endpoint
-config :course_work_web, CodeCitadelWeb.Endpoint,
+config :course_work, CodeCitadel.CouserWorkWeb.Endpoint,
   url: [host: "localhost"],
-  render_errors: [view: CodeCitadelWeb.ErrorView, accepts: ~w(html json), layout: false],
+  render_errors: [
+    view: CodeCitadel.CouserWorkWeb.ErrorView,
+    accepts: ~w(html json),
+    layout: false
+  ],
   pubsub_server: CodeCitadel.PubSub,
   live_view: [signing_salt: "jO93Geel"]
 
@@ -44,7 +49,7 @@ config :esbuild,
   default: [
     args:
       ~w(js/app.js --bundle --target=es2017 --outdir=../priv/static/assets --external:/fonts/* --external:/images/*),
-    cd: Path.expand("../apps/course_work_web/assets", __DIR__),
+    cd: Path.expand("../apps/course_work/assets", __DIR__),
     env: %{"NODE_PATH" => Path.expand("../deps", __DIR__)}
   ]
 

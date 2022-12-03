@@ -1,5 +1,5 @@
-defmodule CodeCitadelWeb.LayoutViewTest do
-  use CodeCitadelWeb.ConnCase, async: true
+defmodule CodeCitadel.CouserWorkWeb.LayoutViewTest do
+  use CodeCitadel.CouserWorkWeb.ConnCase, async: true
 
   # When testing helpers, you may want to import Phoenix.HTML and
   # use functions such as safe_to_string() to convert the helper

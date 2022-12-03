@@ -1,5 +1,5 @@
-defmodule CodeCitadelWeb.PageControllerTest do
-  use CodeCitadelWeb.ConnCase
+defmodule CodeCitadel.CouserWorkWeb.PageControllerTest do
+  use CodeCitadel.CouserWorkWeb.ConnCase
 
   test "GET /", %{conn: conn} do
     conn = get(conn, "/")
