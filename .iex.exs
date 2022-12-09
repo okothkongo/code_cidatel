@@ -1,0 +1,1 @@
+alias CodeCidatel.CouseWork.UnixShell
